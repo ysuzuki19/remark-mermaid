@@ -1,0 +1,44 @@
+{
+  "name": "npm-package-template",
+  "version": "1.0.0",
+  "description": "template repository for npm package",
+  "main": "./dist/index.umd.min.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "jest",
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ysuzuki19/npm-package-template.git"
+  },
+  "keywords": [
+    "typescript",
+    "npm",
+    "package",
+    "rollup",
+    "template"
+  ],
+  "author": "ysuzuki19 (https://ysuzuki19.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ysuzuki19/npm-package-template/issues"
+  },
+  "homepage": "https://github.com/ysuzuki19/npm-package-template#readme",
+  "devDependencies": {
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-typescript": "^8.3.0",
+    "@types/jest": "^27.4.0",
+    "jest": "^27.5.1",
+    "rollup": "^2.68.0",
+    "rollup-plugin-dts": "^4.1.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "ts-jest": "^27.1.3",
+    "typescript": "^4.5.5"
+  }
+}
