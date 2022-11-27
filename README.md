@@ -1,6 +1,6 @@
 # @ysuzuki19/remark-mermaid
 
-mermaid plugin for mermaid in markdown.
+remark plugin for mermaid in markdown.
 
 # install
 
@@ -23,6 +23,8 @@ async function main() {
 ```
 
 For visualize mermaid, you must to run `mermaid.init();` in frontend code.
+
+Because this plugin only transform mermaid code block into `<div class="mermaid">`.
 
 ## markdown -> html
 
