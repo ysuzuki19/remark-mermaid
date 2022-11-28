@@ -1,5 +1,7 @@
 # @ysuzuki19/remark-mermaid
 
+[![npm version](https://badge.fury.io/js/@ysuzuki19%2Fremark-mermaid.svg)](https://badge.fury.io/js/@ysuzuki19%2Fremark-mermaid)
+
 remark plugin for mermaid in markdown.
 
 # install
