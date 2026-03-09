@@ -2,16 +2,24 @@
   "name": "@ysuzuki19/remark-mermaid",
   "version": "1.0.2",
   "description": "remark plugin for mermaid in markdown",
-  "main": "./dist/index.es.js",
-  "module": "./dist/index.es.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      }
+    }
+  },
   "type": "module",
   "files": [
     "dist"
   ],
   "scripts": {
-    "test": "jest",
-    "build": "rollup -c",
+    "test": "NODE_OPTIONS='--experimental-vm-modules' jest",
+    "build": "tsdown index.ts --format esm --dts",
     "prepublishOnly": "npm run build"
   },
   "repository": {
@@ -30,18 +38,14 @@
   },
   "homepage": "https://github.com/ysuzuki19/remark-mermaid#readme",
   "devDependencies": {
-    "@rollup/plugin-babel": "^6.0.3",
-    "@rollup/plugin-typescript": "^10.0.0",
-    "@types/jest": "^27.4.0",
-    "jest": "^27.5.1",
+    "@types/jest": "^30.0.0",
+    "jest": "^30.2.0",
     "remark": "^14.0.2",
-    "rollup": "^3.5.0",
-    "rollup-plugin-dts": "^5.0.0",
-    "ts-jest": "^27.1.3",
-    "typescript": "^4.5.5"
+    "ts-jest": "^29.4.6",
+    "tsdown": "^0.21.1",
+    "typescript": "^5.9.3"
   },
   "dependencies": {
-    "tslib": "^2.4.1",
     "unist-util-visit": "^4.1.1"
   }
 }
